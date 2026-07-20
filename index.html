@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>SUZU Portfolio</title>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
   /* 1. ページ全体の設定（フォントと文字の余白・間隔） */
   body {
@@ -84,8 +84,28 @@
     border-color: #999;
     background-color: #fff;
   }
-</style>
+  .insta-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    font-size: 1.4rem;           /* アイコンの大きさ */
+    color: #444;                 /* アイコンの色 */
+    border: 1px solid #ddd;      /* 丸い枠線 */
+    border-radius: 50%;          /* 完全な丸形にする */
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
 
+  .insta-icon:hover {
+    color: #e1306c;              /* ホバー時にインスタカラーに変化 */
+    border-color: #e1306c;
+    transform: translateY(-2px); /* ほんのり上に浮き上がる効果 */
+  }
+ 
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -107,7 +127,9 @@ Photography Portfolio
     
 <footer>
   <p>
-    <a href="https://www.instagram.com/osuzu0103/?hl=ja">Instagram</a>
+    <a href="https://www.instagram.com/osuzu0103" target="_blank" rel="noopener noreferrer" class="insta-icon" aria-label="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
   </p>
 </footer>
 
