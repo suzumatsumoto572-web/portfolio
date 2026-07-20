@@ -1,14 +1,65 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>Portfolio</title>
+<meta charset="UTF-8">
+<title>SUZU Portfolio</title>
+
+<style>
+body{
+    font-family: Arial,sans-serif;
+    background:white;
+    color:black;
+    margin:40px;
+}
+
+h1{
+    text-align:center;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:8px;
+}
+
+footer{
+    text-align:center;
+    margin-top:50px;
+}
+</style>
+
 </head>
+
 <body>
 
-<h1>Photography Portfolio</h1>
+<h1>MATSUMOTO</h1>
 
-<p>Photography Portfolio</p>
+<p style="text-align:center;">
+Photography Portfolio
+</p>
+
+<div class="gallery">
+
+<img src="images/photo1.jpg">
+<img src="images/photo2.jpg">
+<img src="images/photo3.jpg">
+
+</div>
+
+<footer>
+
+<p>
+<a href="ここにInstagramのURLを書く">
+Instagram
+</a>
+</p>
+
+</footer>
 
 </body>
 </html>
