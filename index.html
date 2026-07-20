@@ -5,38 +5,85 @@
 <title>SUZU Portfolio</title>
 
 <style>
-    
-.gallery {
-  display: flex;             /* 写真を横一列に並べる */
-  overflow-x: auto;          /* はみ出た分を横スクロール可能に */
-  scroll-snap-type: x mandatory; /* スクロール時にピタッと写真中央で止まる */
-  gap: 16px;                 /* 写真同士の間隔 */
-  padding: 20px 0;
-  -webkit-overflow-scrolling: touch; /* スマホでのスクロールを滑らかに */
-}
+  /* 1. ページ全体の設定（フォントと文字の余白・間隔） */
+  body {
+    margin: 0;
+    padding: 60px 20px;       /* 上下にしっかり余白をつくる */
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    background-color: #fafafa; /* ほんのり優しい明るい背景色 */
+    color: #333;
+    text-align: center;
+  }
 
-/* スクロールバーのデザインをシンプルに（必要に応じて） */
-.gallery::-webkit-scrollbar {
-  height: 8px;
-}
-.gallery::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 4px;
-}
+  /* 2. タイトルまわりの余白と文字デザイン */
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 0.2em;    /* 文字間隔を広げて洗練された雰囲気に */
+    margin-bottom: 8px;
+    font-weight: 300;         /* 細めでおしゃれなフォント */
+  }
 
-/* 写真1枚ずつの設定 */
-.gallery img {
-  flex: 0 0 80%;             /* 画面幅の80%サイズで表示（左右に次の写真が見える） */
-  max-width: 500px;          /* PCで見ても大きくなりすぎない制限 */
-  scroll-snap-align: center; /* スクリーン中央にフィット */
-  border-radius: 12px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
+  p {
+    font-size: 0.9rem;
+    color: #777;
+    letter-spacing: 0.15em;
+    margin-top: 0;
+    margin-bottom: 40px;      /* タイトルとギャラリーの間の余白 */
+  }
 
-.gallery img:hover {
-  transform: scale(1.02);
-}
+  /* 3. 横スクロールギャラリーの余白 */
+  .gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 24px;                 /* 写真同士の間隔を少し広く */
+    padding: 10px 0 50px 0;    /* 下に余白をとる */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .gallery::-webkit-scrollbar {
+    display: none;             /* スクロールバーを消してすっきり見せる */
+  }
+
+  /* 4. 写真の設定 */
+  .gallery img {
+    flex: 0 0 75%;
+    max-width: 480px;
+    height: 360px;            /* 高さを揃えて統一感を出す */
+    object-fit: cover;         /* 枠に合わせて綺麗にトリミング */
+    scroll-snap-align: center;
+    border-radius: 8px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .gallery img:hover {
+    opacity: 0.9;
+    transform: scale(1.01);
+  }
+
+  /* 5. フッター（Instagramリンク）のおしゃれなデザイン */
+  footer {
+    margin-top: 20px;         /* ギャラリーからの余白 */
+  }
+
+  footer a {
+    color: #555;
+    text-decoration: none;    /* 下線を消す */
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;    /* 文字間隔を広げる */
+    text-transform: uppercase;/* 大文字（INSTAGRAM）に統一 */
+    padding: 10px 20px;
+    border: 1px solid #ddd;   /* 細い枠線で囲むボタン風デザイン */
+    border-radius: 30px;      /* 丸みをつける */
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+
+  footer a:hover {
+    color: #000;
+    border-color: #999;
+    background-color: #fff;
+  }
 </style>
 
 </head>
